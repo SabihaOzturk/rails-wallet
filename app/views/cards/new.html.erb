@@ -4,13 +4,14 @@
       <li> <%= msg %> </li>
     <% end %>
   </ul>
+<% end%>  
 
 <%= form_for @card do |f| %>
   <%= f.label :number %>
   <%= f.text_field :number %>
-  <%= f.label :exp_month %>
+  <%= f.label :expiration_month %>
   <%= f.select :exp_month, (1..12) %>
-  <%= f.label :exp_year %>
+  <%= f.label :expiration_year %>
   <%= f.select :exp_year, (2015..2029) %>
   <%= f.submit 'Create Card' %>
 <% end %>
