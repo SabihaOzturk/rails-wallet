@@ -1,0 +1,12 @@
+<%= render 'shared/errors', model: @user %>
+
+<%= form_for(@user) do |f| %>
+    <%= f.text_field :fname, placeholder: 'First Name' %><br>
+    <%= f.text_field :lname, placeholder: 'Last Name' %><br>
+    <%= f.text_field :email, placeholder: 'Email' %>
+    <%= f.text_field :phone, placeholder: 'Phone' %>
+    <%= f.password_field :password_confirmation, placeholder: 'Confirm password' %>
+    <%= f.submit 'Update my info' %>
+<% end %>
+
+<%= link_to "Delete Account", user_path(@user), method: :delete %>

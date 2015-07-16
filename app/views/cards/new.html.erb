@@ -1,0 +1,16 @@
+<% if @card.errors.any? %>
+  <ul>
+    <% @card.errors.full_messages.each do |msg| %>
+      <li> <%= msg %> </li>
+    <% end %>
+  </ul>
+
+<%= form_for @card do |f| %>
+  <%= f.label :number %>
+  <%= f.text_field :number %>
+  <%= f.label :exp_month %>
+  <%= f.select :exp_month, (1..12) %>
+  <%= f.label :exp_year %>
+  <%= f.select :exp_year, (2015..2029) %>
+  <%= f.submit 'Create Card' %>
+<% end %>

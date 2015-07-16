@@ -2,8 +2,10 @@ class Card < ActiveRecord::Base
   validates_format_of :number, with: /\A[345]\d{11,15}\Z/
   validates :exp_month, inclusion: {in: (1..12)}
   validates :exp_year, inclusion: {in:(2015..2115)}
+  validates :users, presence:true
 
   before_save :set_card_type
+
 
   def set_card_type
     first_num = self.number[0]

@@ -1,0 +1,6 @@
+<h1>Your User Information</h1>
+<div>
+  <%= @user.full_name %>
+  <%= link_to 'Cards', user_cards_path(@user) %>
+  <%= link_to 'Edit your information', edit_user_path(@user) %>
+</div> 
