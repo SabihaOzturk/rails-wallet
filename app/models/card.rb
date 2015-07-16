@@ -7,7 +7,7 @@ class Card < ActiveRecord::Base
 
   def set_card_type
     first_num = self.number[0]
-    self.type = case first_num
+    self.card_type = case first_num
     when '3'
       'American Express'
     when '4'
