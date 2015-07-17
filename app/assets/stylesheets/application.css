@@ -16,8 +16,12 @@
 .notice {
   background-color: lightblue;
   color: #fff;
+  font-size: 28px;
+  text-align: center;
 }
 .alert {
   background-color: #ccc;
   color : red;
+  font-size: 24px;
+  text-align: center;
 }

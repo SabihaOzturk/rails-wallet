@@ -15,6 +15,10 @@ class User < ActiveRecord::Base
     owned_cards.each &:destroy!
   end
 
+  def full_name
+    fname + ' ' + lname
+  end
+
   has_many :cards, through: :user_cards
   has_many :user_cards
 end

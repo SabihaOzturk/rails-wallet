@@ -1,6 +1,10 @@
-<h1>Your User Information</h1>
-<div>
-  <%= @user.full_name %>
+
+<div class="insertform">
+  <h1>User Information</h1>
+  <p><%= @user.full_name %></p>
+  <div class="uslink">
   <%= link_to 'Cards', user_cards_path(@user) %>
-  <%= link_to 'Edit your information', edit_user_path(@user) %>
-</div> 
+  <%= link_to 'Edit', edit_user_path(@user) %>
+  </div> 
+  </div>
+</div>

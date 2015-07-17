@@ -6,18 +6,22 @@
   </ul>
 <% end %>
 
+<div class="insert">
+  <div class="insertform">
 <%= form_for @user do |f| %>
-  <%= f.label :fname %>
+  <%= f.label 'First Name' %>
   <%= f.text_field :fname, placeholder: 'First Name' %><br>
-  <%= f.label :lname %>
+  <%= f.label 'Last Name' %>
   <%= f.text_field :lname, placeholder: 'Last Name' %><br>
-  <%= f.label :email %>
+  <%= f.label 'Email' %>
   <%= f.text_field :email, placeholder: 'Email' %><br>
-  <%= f.label :phone %>
+  <%= f.label 'Phone Number' %>
   <%= f.text_field :phone, placeholder: 'xxx-xxx-xxxx' %><br>
-  <%= f.label :password %>
+  <%= f.label 'Password' %>
   <%= f.password_field :password, placeholder: 'Password' %><br>
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, placeholder: 'Confirm your password' %><br>
   <%= f.submit 'Sign Up' %>
 <% end %>
+</div>
+</div>

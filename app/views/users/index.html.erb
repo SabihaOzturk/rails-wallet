@@ -1,8 +1,11 @@
+
 <% @users.each do |user| %>
  
-<div>
-  <%= "#{user.fname} #{user.lname}" %>
+<div class="userlist">
+  <p><%= user.full_name %></p><br>
+
   <%= link_to 'Cards', user_cards_path(user) %>
 
+  <%= link_to 'Edit', edit_user_path(user) %>
 </div>
 <% end %>

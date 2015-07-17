@@ -1,11 +1,21 @@
-<h1>Log In</h1>
-<%= form_tag '/sessions' do %>
+
+<p>Welcome to Wallet App</p>
+
+<div class="insert">
+
+  <div class="insertform">
+    <h1>Log In</h1>
+  <%= form_tag '/sessions' do %>
   <%= label_tag :email %>
-  <%= text_field_tag :email %>
+  <%= text_field_tag :email %><br>
   <%= label_tag :password %>
-  <%= password_field_tag :password %>
+  <%= password_field_tag :password %><br>
   <%= submit_tag 'Log In' %>
 
-  <%end%>
+  <%end%><br>
+  </div>
 
-  Not a Member ? <%= link_to "Sign up", new_user_path %>
+  <div class="signlink">
+   <p>Not a Member ? <%= link_to "Sign up", new_user_path %></p>
+  </div>
+</div>

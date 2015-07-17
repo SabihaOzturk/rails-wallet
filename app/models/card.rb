@@ -4,8 +4,15 @@ class Card < ActiveRecord::Base
   validates :exp_year, inclusion: {in:(2015..2115)}
   validates :users, presence:true
 
-  before_save :set_card_type
+  before_save :set_card_type, :set_expiration_date
 
+  def set_expiration_date
+    self.expiration_date = DateTime.new(self.exp_year,
+                                        self.exp_month,
+                                        28)
+  end
+
+  scope :expired, lambda { where('expiration_date < ?', Time.now) }
 
   def set_card_type
     first_num = self.number[0]

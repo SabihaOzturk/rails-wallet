@@ -1,9 +1,3 @@
 <% @cards.each do |card| %>
-  <div class='card'>
-    <ul class='card-attributes'>
-      <li> <%= card.card_type %> </li>
-      <li> <%= card.number %> </li>
-      <li> Expires: <%= "#{card.exp_month}/#{card.exp_year}" %> </li>
-    </ul>
-  </div>
+  <%= render partial: 'card', locals: {card: card} %>
 <% end %>

@@ -6,12 +6,19 @@
   </ul>
 <% end%>  
 
-<%= form_for @card do |f| %>
+<div class= "insert">
+  
+  <div class= "insertform">
+    <br><br>
+  <%= form_for @card do |f| %>
   <%= f.label :number %>
   <%= f.text_field :number %>
-  <%= f.label :expiration_month %>
+  <%= f.label :exp_month %>
   <%= f.select :exp_month, (1..12) %>
-  <%= f.label :expiration_year %>
+  <%= f.label :exp_year %>
   <%= f.select :exp_year, (2015..2029) %>
   <%= f.submit 'Create Card' %>
 <% end %>
+
+  </div>
+</div>

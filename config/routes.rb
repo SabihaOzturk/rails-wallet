@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
-  resources :cards
+
   resources :sessions
 
   resources :users do
     resources :cards
   end
   
+    resources :cards do
+      collection do
+        get 'expired'
+      end
+    end
+
+    post '/share-card' => 'user_cards#create', as: 'share_card'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

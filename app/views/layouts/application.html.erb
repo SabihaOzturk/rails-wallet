@@ -7,20 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <nav>
-    <%= link_to 'New Card', new_card_path  %>
-    <%= link_to 'View All Cards', cards_path %>
-    <%= link_to 'All Users', users_path  %>
-  </nav>
-
-<%= render 'shared/flashes' %>
+<nav id="navcard">
 
 <%if current_user %>
 <%= link_to 'Log out', session_path(current_user.id), method: :delete %>
+<%= link_to 'Home', root_path %>
+<%= link_to 'New Card', new_card_path  %>
+<%= link_to 'View All Cards', cards_path %>
+<%= link_to 'All Users', users_path  %>
+ 
 <%end%>
+</nav>
+
+<div id="wrapper">
+
+<%= render 'shared/flashes' %>
+
 
 <%= yield %>
-
+</div>
 </body>
 </html>

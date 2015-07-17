@@ -12,6 +12,7 @@ def create
   @user = User.create user_params
   if @user.valid?
     flash[:alert] = "Thank you for join us"
+    session[:user_id] = @user.id
     redirect_to users_path
   else
     flash[:alert] = "Something wrong, try again please"
@@ -47,7 +48,7 @@ def destroy
     @user = User.find params[:id]
     @user.destroy!
     session.clear
-    flash[:success] = "User deleted"
+    flash[:alert] = "User deleted"
     redirect_to root_path
   end
 
