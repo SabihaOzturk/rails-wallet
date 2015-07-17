@@ -12,7 +12,7 @@ class Card < ActiveRecord::Base
                                         28)
   end
 
-  scope :expired, lambda { where('expiration_date < ?', Time.now) }
+  scope :expired, lambda{ where('expiration_date < ?', Time.now) }
 
   def set_card_type
     first_num = self.number[0]

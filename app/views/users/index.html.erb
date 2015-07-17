@@ -1,11 +1,12 @@
-
+<div class='insert'>
 <% @users.each do |user| %>
  
-<div class="userlist">
-  <p><%= user.full_name %></p><br>
+<div class='insertform'>
+  <p><%= user.full_name %>
 
   <%= link_to 'Cards', user_cards_path(user) %>
 
-  <%= link_to 'Edit', edit_user_path(user) %>
+  <%= link_to 'Edit', edit_user_path(user) %></p>
 </div>
 <% end %>
+</div>

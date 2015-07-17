@@ -15,7 +15,7 @@
 <%= link_to 'New Card', new_card_path  %>
 <%= link_to 'View All Cards', cards_path %>
 <%= link_to 'All Users', users_path  %>
- 
+<%= link_to "Delete Account", user_path(current_user.id), method: :delete %>
 <%end%>
 </nav>
 
