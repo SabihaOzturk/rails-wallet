@@ -1,3 +1,4 @@
+<div class='error'>
 <% if @card.errors.any? %>
   <ul>
     <% @card.errors.full_messages.each do |msg| %>
@@ -5,6 +6,7 @@
     <% end %>
   </ul>
 <% end%>  
+</div>
 
 <div class= "insert">
   
