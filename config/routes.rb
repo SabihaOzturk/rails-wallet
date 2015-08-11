@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
     post '/share-card' => 'user_cards#create', as: 'share_card'
 
+    get '/dribble_shots' => 'dribble_shots#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
